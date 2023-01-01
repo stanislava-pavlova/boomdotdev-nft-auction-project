@@ -1,0 +1,13 @@
+@use '../../styles/colors';
+
+.header {
+  background-color: colors.$background_paper;
+}
+
+.background_default {
+  background: colors.$background_default;
+}
+
+.primaryText {
+    color: colors.$text_primary;
+}
