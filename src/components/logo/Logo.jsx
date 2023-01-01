@@ -1,7 +1,7 @@
 // import defaultLogo from '../../../public/images/logo.svg';
 // import mutedLogo from '../../../public/images/logo-muted.svg';
 
-function Logo({ type }) {
+export default function Logo({ type }) {
   //   return <img src={type == 'default' ? mutedLogo : defaultLogo} alt="logo" />;
   return (
     <img
@@ -15,4 +15,3 @@ Logo.defaultProps = {
   type: 'default',
 };
 
-export default Logo;
