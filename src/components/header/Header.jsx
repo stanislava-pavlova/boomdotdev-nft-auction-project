@@ -7,7 +7,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 export default function Header() {
   return (
-    <Container className={classNames(styles.header)} maxWidth="xl">
+    <Container className={classNames(styles['header'])} maxWidth="xl">
       <Grid
         container
         direction="row"
@@ -24,19 +24,19 @@ export default function Header() {
             placeholder="Find items, users and activities"
             fullWidth
             sx={{ p: 0.5, borderRadius: 1 }}
-            className={classNames(styles.background_default)}
+            className={classNames(styles['background-default'])}
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">
-                  <SearchIcon className={classNames(styles.primaryText)} />
+                  <SearchIcon className={classNames(styles['text-primary'])} />
                 </InputAdornment>
               ),
             }}
           />
         </Grid>
         <Grid item xs="auto">
-          <Button variant="text" className={classNames(styles.primaryText)}>Home</Button>
-          <Button variant="text" className={classNames(styles.primaryText)}>Activity</Button>
+          <Button variant="text" className={classNames(styles['text-primary'])}>Home</Button>
+          <Button variant="text" className={classNames(styles['text-primary'])}>Activity</Button>
           <Button variant="contained">EXPLORE</Button>
         </Grid>
       </Grid>

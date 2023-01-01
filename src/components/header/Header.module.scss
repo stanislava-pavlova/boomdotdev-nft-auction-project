@@ -1,13 +1,13 @@
-@use '../../styles/colors.scss';
+@use "../../styles/colors.scss";
 
 .header {
-  background-color: colors.$background_paper;
+  background: colors.$background_paper;
 }
 
-.background_default {
+.background-default {
   background: colors.$background_default;
 }
 
-.primaryText {
+.text-primary {
     color: colors.$text_primary;
 }
