@@ -1,0 +1,23 @@
+@use '../../styles/colors.scss';
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: colors.$background_paper;
+}
+
+.user-info p {
+  margin: 0;
+  padding: 0;
+}
+
+.name {
+  font-weight: bold;
+  color: colors.$text_primary;
+}
+
+.info {
+  font-size: 0.75rem;
+  color: colors.$info_main;
+}
