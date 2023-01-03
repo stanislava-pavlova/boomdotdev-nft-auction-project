@@ -1,0 +1,6 @@
+@use "../../styles/colors.scss";
+
+.name {
+  font-weight: bold !important;
+  color: colors.$text_primary;
+}
