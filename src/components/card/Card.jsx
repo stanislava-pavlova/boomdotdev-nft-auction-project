@@ -6,9 +6,7 @@ import styles from './Card.module.scss';
 import CardContainer from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-// import Avatar from '@mui/material/Avatar';
 import Avatar from '../avatar/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
@@ -17,12 +15,12 @@ import Chip from '@mui/material/Chip';
 import Container from '@mui/material/Container';
 
 export default function Card({
-  name = 'Clock',
-  likes = 1100,
+  name,
+  likes = 0,
   mediaUrl,
   user,
-  price = '~12.2',
-  currency = 'ETH',
+  price,
+  currency,
 }) {
   return (
     <CardContainer sx={{ maxWidth: 345 }}>
@@ -35,9 +33,7 @@ export default function Card({
       />
       <CardActions>
         <Container className={classNames(styles['cardActions-container'])}>
-          <Typography className={classNames(styles['name'])}>
-            {name}
-          </Typography>
+          <Typography className={classNames(styles['name'])}>{name}</Typography>
           <Typography className={classNames(styles['price'])} color="secondary">
             {price + ' ' + currency}
           </Typography>
