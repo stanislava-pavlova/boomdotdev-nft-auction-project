@@ -35,7 +35,7 @@ export default function Card({
         <Container className={classNames(styles['cardActions-container'])}>
           <Typography className={classNames(styles['name'])}>{name}</Typography>
           <Typography className={classNames(styles['price'])} color="secondary">
-            {price + ' ' + currency}
+            ~{price} {currency}
           </Typography>
         </Container>
         <IconButton aria-label="add to favorites">
