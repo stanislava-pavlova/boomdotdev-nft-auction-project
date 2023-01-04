@@ -28,14 +28,14 @@ export default function Card({
       <CardMedia
         component="img"
         height="194"
-        image="images/nft.jpg"
+        image={mediaUrl}
         alt="image"
       />
       <CardActions>
         <Container className={classNames(styles['cardActions-container'])}>
           <Typography className={classNames(styles['name'])}>{name}</Typography>
           <Typography className={classNames(styles['price'])} color="secondary">
-            ~{price} {currency}
+            {price} {currency}
           </Typography>
         </Container>
         <IconButton aria-label="add to favorites">
