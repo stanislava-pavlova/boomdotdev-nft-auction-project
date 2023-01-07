@@ -2,7 +2,7 @@ import Card from '../card/Card';
 import styles from './Trending.module.scss';
 import classNames from 'classnames';
 
-import { Container, Grid, InputLabel, FormControl, Select, MenuItem  } from '@mui/material';
+import { Container, Grid, InputLabel, FormControl, Select, MenuItem } from '@mui/material';
 
 export default function Trending({ cards = [] }) {
   return (
@@ -25,7 +25,7 @@ export default function Trending({ cards = [] }) {
               <Grid key={value} item>
                 <Card
                   name={card.name}
-                  user={card.user}
+                  user={card}
                   mediaUrl={card.mediaUrl}
                   price={card.price}
                   currency={card.currency}
