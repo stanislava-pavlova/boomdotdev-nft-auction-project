@@ -24,13 +24,8 @@ export default function Card({
 }) {
   return (
     <CardContainer sx={{ maxWidth: 345 }}>
-      <CardHeader avatar={<Avatar size={50} verified={true} />} />
-      <CardMedia
-        component="img"
-        height="194"
-        image={mediaUrl}
-        alt="image"
-      />
+      <CardHeader avatar={<Avatar size={50} url={user} verified={true} />} />
+      <CardMedia component="img" height="194" image={mediaUrl} alt="image" />
       <CardActions>
         <Container className={classNames(styles['cardActions-container'])}>
           <Typography className={classNames(styles['name'])}>{name}</Typography>
