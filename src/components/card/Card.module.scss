@@ -1,6 +1,40 @@
-@use "../../styles/colors.scss";
+@use '../../styles/colors.scss';
 
 .name {
   font-weight: bold !important;
   color: colors.$text_primary;
+}
+
+.cardMedia-container {
+  padding: 0 1rem !important;
+  position: relative;
+}
+
+.cardMedia {
+  border-radius: 0.8rem 0.8rem 0 0;
+  position: relative;
+}
+
+.badge {
+  background-color: colors.$secondary_main !important;
+  color: colors.$background_default !important;
+  position: absolute;
+  z-index: 2;
+  left: 2rem;
+  top: 0.5rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.badge > * {
+  color: colors.$background_default !important;
+}
+
+.timer-container {
+  text-align: center;
+  font-weight: bold;
+  background-color: colors.$secondary_main;
+  color: colors.$background_default;
+  border-radius: 0 0 0.8rem 0.8rem;
 }

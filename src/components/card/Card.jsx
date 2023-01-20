@@ -2,17 +2,16 @@ import millify from 'millify';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './Card.module.scss';
+import { useState } from 'react';
 
-import CardContainer from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
-import CardActions from '@mui/material/CardActions';
 import Avatar from '../avatar/Avatar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
+import Countdown from '../countdown/Countdown';
+
+import { Container, IconButton, Typography, Chip, Box, Badge } from '@mui/material';
+import { Card as CardContainer, CardHeader, CardMedia, CardActions } from '@mui/material';
+
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import Chip from '@mui/material/Chip';
-import Container from '@mui/material/Container';
+import CircleIcon from '@mui/icons-material/Circle';
 
 export default function Card({
   name,
@@ -21,18 +20,52 @@ export default function Card({
   user,
   price,
   currency,
+  timeLeft = 3000,
 }) {
+  const [live, setLive] = useState(() => {
+    if (timeLeft) {
+      return true;
+    }
+    return false;
+  });
+
   return (
     <CardContainer sx={{ maxWidth: 345 }}>
-      <CardHeader avatar={<Avatar size={50} url={user} verified={true} />} />
-      <CardMedia component="img" height="194" image={mediaUrl} alt="image" />
-      <CardActions>
-        <Container className={classNames(styles['cardActions-container'])}>
+      <CardHeader
+        avatar={<Avatar size={50} url={user.avatar} verified={true} />}
+      />
+      <Container className={classNames(styles['cardMedia-container'])}>
+        {live && (
+          <Chip
+            className={classNames(styles['badge'])}
+            icon={<CircleIcon />}
+            label="live"
+          />
+          // <Badge className={classNames(styles['badge'])}>
+          //   <CircleIcon />
+          //   Live
+          // </Badge>
+        )}
+        <CardMedia
+          component="img"
+          height="194"
+          image={mediaUrl}
+          alt="image"
+          className={classNames(styles['cardMedia'])}
+        />
+        {live ? (
+          <Container className={classNames(styles['timer-container'])}>
+            <Countdown timeLeft={timeLeft} />
+          </Container>
+        ) : null}
+      </Container>
+      <CardActions sx={{display: 'flex', justifyContent: 'space-between'}}>
+        <Box sx={{pl: '24px'}}>
           <Typography className={classNames(styles['name'])}>{name}</Typography>
           <Typography className={classNames(styles['price'])} color="secondary">
             {price} {currency}
           </Typography>
-        </Container>
+        </Box>
         <IconButton aria-label="add to favorites">
           <Chip
             className={classNames(styles['likes'])}
@@ -59,4 +92,5 @@ Card.propTypes = {
   },
   price: PropTypes.string,
   currency: PropTypes.string,
+  timeLeft: PropTypes.number,
 };
