@@ -7,8 +7,20 @@ import { useState } from 'react';
 import Avatar from '../avatar/Avatar';
 import Countdown from '../countdown/Countdown';
 
-import { Container, IconButton, Typography, Chip, Box, Badge } from '@mui/material';
-import { Card as CardContainer, CardHeader, CardMedia, CardActions } from '@mui/material';
+import {
+  Container,
+  IconButton,
+  Typography,
+  Chip,
+  Box,
+  Badge,
+} from '@mui/material';
+import {
+  Card as CardContainer,
+  CardHeader,
+  CardMedia,
+  CardActions,
+} from '@mui/material';
 
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import CircleIcon from '@mui/icons-material/Circle';
@@ -32,7 +44,9 @@ export default function Card({
   return (
     <CardContainer sx={{ maxWidth: 345 }}>
       <CardHeader
-        avatar={<Avatar size={50} url={user.avatar} verified={user.verified} />}
+        avatar={
+          <Avatar size={50} url={user.avatar.url} verified={user.verified} />
+        }
       />
       <Container className={classNames(styles['cardMedia-container'])}>
         {live && (
@@ -55,8 +69,8 @@ export default function Card({
           </Container>
         ) : null}
       </Container>
-      <CardActions sx={{display: 'flex', justifyContent: 'space-between'}}>
-        <Box sx={{pl: '24px'}}>
+      <CardActions sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        <Box sx={{ pl: '24px' }}>
           <Typography className={classNames(styles['name'])}>{name}</Typography>
           <Typography className={classNames(styles['price'])} color="secondary">
             {price} {currency}
@@ -78,13 +92,15 @@ export default function Card({
 
 Card.propTypes = {
   name: PropTypes.string,
-  user:{
-    avatar: PropTypes.string,
-    verified: PropTypes.bool
-  },
+  likes: PropTypes.number,
   mediaUrl: PropTypes.string,
+  user: {
+    avatar: {
+      url: PropTypes.string,
+    },
+    verified: PropTypes.bool,
+  },
   price: PropTypes.string,
   currency: PropTypes.string,
   timeLeft: PropTypes.number,
-  likes: PropTypes.number,
 };
