@@ -7,7 +7,6 @@ export default function Index() {
   return (
     <>
       <Header />
-      <Trending />
       <Auctions />
     </>
   );
