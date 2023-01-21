@@ -2,14 +2,7 @@ import Card from '../card/Card';
 import styles from './Auctions.module.scss';
 import classNames from 'classnames';
 
-import {
-  Container,
-  Grid,
-  InputLabel,
-  FormControl,
-  Select,
-  MenuItem,
-} from '@mui/material';
+import { Container, Grid, InputLabel, FormControl, Select, MenuItem, } from '@mui/material';
 
 export default function Auctions({ cards = [] }) {
   return (

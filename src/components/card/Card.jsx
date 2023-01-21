@@ -44,9 +44,7 @@ export default function Card({
   return (
     <CardContainer sx={{ maxWidth: 345 }}>
       <CardHeader
-        avatar={
-          <Avatar size={50} url={user.avatar.url} verified={user.verified} />
-        }
+        avatar={<Avatar size={50} url={user.avatar} verified={user.verified} />}
       />
       <Container className={classNames(styles['cardMedia-container'])}>
         {live && (
@@ -95,9 +93,7 @@ Card.propTypes = {
   likes: PropTypes.number,
   mediaUrl: PropTypes.string,
   user: {
-    avatar: {
-      url: PropTypes.string,
-    },
+    avatar: PropTypes.string,
     verified: PropTypes.bool,
   },
   price: PropTypes.string,

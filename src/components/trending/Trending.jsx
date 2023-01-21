@@ -19,21 +19,19 @@ export default function Trending({ cards = [] }) {
         </FormControl>
       </header>
       <Grid sx={{ flexGrow: 1 }} container>
-        <Grid item xs={12}>
-          <Grid container justifyContent="center" spacing={4}>
-            {cards.map((card, value) => (
-              <Grid key={value} item>
-                <Card
-                  name={card.name}
-                  user={card.user}
-                  mediaUrl={card.mediaUrl}
-                  price={card.price}
-                  currency={card.currency}
-                  timeLeft={card.timeLeft}
-                />
-              </Grid>
-            ))}
-          </Grid>
+        <Grid container justifyContent="center" spacing={4}>
+          {cards.map((card, value) => (
+            <Grid key={value} item>
+              <Card
+                name={card.name}
+                user={card.user}
+                mediaUrl={card.mediaUrl}
+                price={card.price}
+                currency={card.currency}
+                timeLeft={card.timeLeft}
+              />
+            </Grid>
+          ))}
         </Grid>
       </Grid>
     </Container>
