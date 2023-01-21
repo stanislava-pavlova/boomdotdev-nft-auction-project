@@ -25,10 +25,11 @@ export default function Trending({ cards = [] }) {
               <Grid key={value} item>
                 <Card
                   name={card.name}
-                  user={card.user.avatar.url}
+                  user={card.user}
                   mediaUrl={card.mediaUrl}
                   price={card.price}
                   currency={card.currency}
+                  timeLeft={card.timeLeft}
                 />
               </Grid>
             ))}

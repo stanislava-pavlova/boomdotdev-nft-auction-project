@@ -32,7 +32,7 @@ export default function Card({
   return (
     <CardContainer sx={{ maxWidth: 345 }}>
       <CardHeader
-        avatar={<Avatar size={50} url={user.avatar} verified={true} />}
+        avatar={<Avatar size={50} url={user.avatarUrl} verified={user.verified} />}
       />
       <Container className={classNames(styles['cardMedia-container'])}>
         {live && (
@@ -41,10 +41,6 @@ export default function Card({
             icon={<CircleIcon />}
             label="live"
           />
-          // <Badge className={classNames(styles['badge'])}>
-          //   <CircleIcon />
-          //   Live
-          // </Badge>
         )}
         <CardMedia
           component="img"
@@ -86,7 +82,7 @@ Card.propTypes = {
   mediaUrl: PropTypes.string,
   user:{
     avatarUrl: PropTypes.string,
-    verified: PropTypes.boolean
+    verified: PropTypes.bool
   },
   price: PropTypes.string,
   currency: PropTypes.string,
