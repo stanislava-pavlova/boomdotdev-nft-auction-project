@@ -20,7 +20,7 @@ export default function Card({
   user,
   price,
   currency,
-  timeLeft = 3000,
+  timeLeft,
 }) {
   const [live, setLive] = useState(() => {
     if (timeLeft) {
