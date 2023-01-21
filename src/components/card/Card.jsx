@@ -84,11 +84,9 @@ Card.propTypes = {
   name: PropTypes.string,
   likes: PropTypes.number,
   mediaUrl: PropTypes.string,
-  user: {
-    avatar: {
-      url: PropTypes.string,
-    },
-    verified: PropTypes.bool,
+  user:{
+    avatarUrl: PropTypes.string,
+    verified: PropTypes.boolean
   },
   price: PropTypes.string,
   currency: PropTypes.string,
