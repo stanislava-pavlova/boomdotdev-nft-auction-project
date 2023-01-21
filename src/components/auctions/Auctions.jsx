@@ -19,21 +19,19 @@ export default function Auctions({ cards = [] }) {
         </FormControl>
       </header>
       <Grid sx={{ flexGrow: 1 }} container>
-        <Grid item xs={12}>
-          <Grid container justifyContent="center" spacing={4}>
-            {cards.map((card, value) => (
-              <Grid key={value} item>
-                <Card
-                  name={card.name}
-                  user={card.user}
-                  mediaUrl={card.mediaUrl}
-                  price={card.price}
-                  currency={card.currency}
-                  timeLeft={card.timeLeft}
-                />
-              </Grid>
-            ))}
-          </Grid>
+        <Grid container justifyContent="center" spacing={4}>
+          {cards.map((card, value) => (
+            <Grid key={value} item>
+              <Card
+                name={card.name}
+                user={card.user}
+                mediaUrl={card.mediaUrl}
+                price={card.price}
+                currency={card.currency}
+                timeLeft={card.timeLeft}
+              />
+            </Grid>
+          ))}
         </Grid>
       </Grid>
     </Container>
@@ -44,9 +42,7 @@ export default function Auctions({ cards = [] }) {
 //     {
 //       name: 'Ivy',
 //       user: {
-//         avatar: {
-//           url: 'images/avatar.png',
-//         },
+//         avatar: 'images/avatar.png',
 //         verified: true,
 //       },
 //       mediaUrl: 'images/nft.jpg',
@@ -57,9 +53,7 @@ export default function Auctions({ cards = [] }) {
 //     {
 //       name: 'Judie',
 //       user: {
-//         avatar: {
-//           url: 'images/avatar.png',
-//         },
+//         avatar: 'images/avatar.png',
 //         verified: true,
 //       },
 //       mediaUrl: 'images/nft.jpg',
@@ -70,9 +64,7 @@ export default function Auctions({ cards = [] }) {
 //     {
 //       name: 'Juniper',
 //       user: {
-//         avatar: {
-//           url: 'images/avatar.png',
-//         },
+//         avatar: 'images/avatar.png',
 //         verified: true,
 //       },
 //       mediaUrl: 'images/nft.jpg',
@@ -83,9 +75,7 @@ export default function Auctions({ cards = [] }) {
 //     {
 //       name: 'Maple',
 //       user: {
-//         avatar: {
-//           url: 'images/avatar.png',
-//         },
+//         avatar: 'images/avatar.png',
 //         verified: true,
 //       },
 //       mediaUrl: 'images/nft.jpg',

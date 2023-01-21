@@ -32,7 +32,7 @@ export default function Card({
   return (
     <CardContainer sx={{ maxWidth: 345 }}>
       <CardHeader
-        avatar={<Avatar size={50} url={user.avatarUrl} verified={user.verified} />}
+        avatar={<Avatar size={50} url={user.avatar} verified={user.verified} />}
       />
       <Container className={classNames(styles['cardMedia-container'])}>
         {live && (
@@ -78,13 +78,13 @@ export default function Card({
 
 Card.propTypes = {
   name: PropTypes.string,
-  likes: PropTypes.number,
-  mediaUrl: PropTypes.string,
   user:{
-    avatarUrl: PropTypes.string,
+    avatar: PropTypes.string,
     verified: PropTypes.bool
   },
+  mediaUrl: PropTypes.string,
   price: PropTypes.string,
   currency: PropTypes.string,
   timeLeft: PropTypes.number,
+  likes: PropTypes.number,
 };
