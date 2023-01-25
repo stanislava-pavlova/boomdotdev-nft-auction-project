@@ -1,0 +1,22 @@
+@use '../../styles/colors.scss';
+
+.number-container {
+  background-color: rgba(colors.$background_paper, 90%) !important;
+}
+
+.text-container {
+  background-color: colors.$background_default !important;
+  padding: 2rem !important;
+}
+
+.number {
+  font-weight: 800 !important;
+  font-size: 5rem !important;
+  padding: 0 1rem;
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: bold !important;
+  margin-bottom: 0.5rem !important;
+}
