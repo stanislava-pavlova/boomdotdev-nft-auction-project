@@ -1,0 +1,19 @@
+@use '../../styles/colors.scss';
+
+.footer {
+  background: colors.$background_paper;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.paragraph {
+  text-align: center;
+  color: colors.$text_disabled;
+}
+
+.buttons button {
+  color: colors.$text_primary !important;
+  text-transform: capitalize;
+}
