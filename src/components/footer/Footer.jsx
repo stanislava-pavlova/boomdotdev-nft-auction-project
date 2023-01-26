@@ -2,8 +2,6 @@ import Logo from '../logo/Logo';
 import styles from './Footer.module.scss';
 import { Container, Grid, Typography, Button } from '@mui/material';
 import classNames from 'classnames';
-import InputAdornment from '@mui/material/InputAdornment';
-import SearchIcon from '@mui/icons-material/Search';
 
 export default function Footer() {
   return (
