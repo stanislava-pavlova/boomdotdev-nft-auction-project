@@ -16,8 +16,8 @@ export default function Footer() {
           </Typography>
         </Grid>
         <Grid item xs="auto" className={classNames(styles['buttons'])}>
-          <Button>Privacy Policy</Button>
-          <Button>Cookie Policy</Button>
+          <Button variant="text">Privacy Policy</Button>
+          <Button variant="text">Cookie Policy</Button>
         </Grid>
       </Grid>
     </Container>
